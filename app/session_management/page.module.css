@@ -1,0 +1,1234 @@
+/* ============================================ */
+/* SESSION MANAGEMENT - MATCHES DASHBOARD THEME */
+/* Glassmorphism + UNESWA Colors                */
+/* ============================================ */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: rgba(0, 51, 102, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  padding: 1.75rem 2rem 2.5rem;
+  overflow-y: auto;
+  min-height: 100vh;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mainContent.collapsed {
+  margin-left: 80px;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideIn 0.3s ease;
+  font-size: 0.85rem;
+  border-left: 4px solid;
+}
+
+.toast.success {
+  border-left-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.toast.error {
+  border-left-color: #c8102e;
+  color: #c8102e;
+}
+
+.toast.info {
+  border-left-color: #ffb81c;
+  color: #ffb81c;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  padding: 1.35rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: clamp(1.65rem, 3vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+  background: linear-gradient(135deg, #ffb81c 0%, #c8102e 55%, #4a9eff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.titleIcon {
+  background: none;
+  -webkit-text-fill-color: #ffb81c;
+  color: #ffb81c;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.statInfo {
+  flex: 1;
+}
+
+.statInfo h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.statInfo p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Section Header */
+.sectionHeader {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.sectionIcon {
+  color: #ffb81c;
+  font-size: 1.2rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Modules Grid */
+.modulesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.moduleCard {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.moduleCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.moduleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.moduleCode {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ffb81c;
+  background: rgba(255, 184, 28, 0.15);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.moduleStudents {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.moduleName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+.moduleDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.detailIcon {
+  font-size: 0.7rem;
+  color: #ffb81c;
+}
+
+.moduleActions {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.qrBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(200, 16, 46, 0.2);
+  color: #c8102e;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qrBtn:hover {
+  background: #c8102e;
+  color: white;
+}
+
+/* Sessions List */
+.sessionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sessionCard {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.sessionCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sessionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sessionModuleName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.sessionModuleCode {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.sessionStatus {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.sessionDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sessionDetailItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.qrCodeText {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #ffb81c;
+}
+
+.sessionActions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.attendanceBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.attendanceBtn:hover {
+  background: #2ecc71;
+  color: white;
+}
+
+.cancelSessionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(200, 16, 46, 0.2);
+  color: #c8102e;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelSessionBtn:hover {
+  background: #c8102e;
+  color: white;
+}
+
+.viewReportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(74, 158, 255, 0.2);
+  color: #4a9eff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewReportBtn:hover {
+  background: #4a9eff;
+  color: white;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 1rem;
+}
+
+.emptyState h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+}
+
+/* QR Modal */
+.qrPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.qrBox {
+  width: 150px;
+  height: 150px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrIcon {
+  font-size: 80px;
+  color: #003366;
+}
+
+.qrInfo {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.qrInfo p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Attendance Modal */
+.modalLarge {
+  background: linear-gradient(180deg, rgba(0, 51, 102, 0.95), rgba(2, 6, 23, 0.95));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.attendanceSummary {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.summaryItem {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.summaryItem strong {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.attendanceList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.attendanceHeader {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.attendanceRow {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.statusButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.statusPresentBtn, .statusAbsentBtn {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.statusPresentBtn {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.statusPresentBtn.active {
+  background: #2ecc71;
+  color: white;
+}
+
+.statusAbsentBtn {
+  background: rgba(200, 16, 46, 0.2);
+  color: #c8102e;
+}
+
+.statusAbsentBtn.active {
+  background: #c8102e;
+  color: white;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: linear-gradient(180deg, rgba(0, 51, 102, 0.95), rgba(2, 6, 23, 0.95));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalHeader h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.modalClose {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modalClose:hover {
+  background: #c8102e;
+}
+
+.modalBody {
+  padding: 1.5rem;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.cancelBtn {
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.confirmBtn, .saveBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  background: #c8102e;
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.confirmBtn:hover, .saveBtn:hover {
+  background: #a00d26;
+  transform: translateY(-1px);
+}
+
+/* Add to your existing CSS */
+
+.manualAttendanceSearch {
+  margin-bottom: 1.5rem;
+}
+
+.manualAttendanceSearch .searchBar {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.manualAttendanceSearch .searchBar .searchInput {
+  flex: 1;
+}
+
+.markPresentBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2ecc71;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.markPresentBtn:hover:not(:disabled) {
+  background: #26a65b;
+}
+
+.attendanceHint {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+}
+
+.presentBadge {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+}
+
+.absentBadge {
+  background: rgba(200, 16, 46, 0.2);
+  color: #c8102e;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+}
+
+
+.infoNote {
+  background: rgba(255, 184, 28, 0.1);
+  border: 1px solid rgba(255, 184, 28, 0.3);
+  border-radius: 10px;
+  padding: 0.6rem;
+  font-size: 0.7rem;
+  color: #ffb81c;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+
+/* Add these to your existing CSS file - just before the responsive queries */
+
+/* QR Modal Form Styles */
+.formGroup {
+  margin-bottom: 1.2rem;
+}
+
+.formGroup label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.inputIcon {
+  color: #ffb81c;
+  font-size: 0.8rem;
+}
+
+.formInput, .formSelect {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.formInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.formInput:focus, .formSelect:focus {
+  outline: none;
+  border-color: #ffb81c;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.formSelect option {
+  background: #003366;
+  color: white;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* QR Modal specific */
+.qrModal {
+  background: linear-gradient(180deg, rgba(0, 51, 102, 0.95), rgba(2, 6, 23, 0.95));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.moduleInfo {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.moduleInfo h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.moduleInfo p {
+  color: #ffb81c;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Attendance Modal specific */
+.attendanceModal {
+  background: linear-gradient(180deg, rgba(0, 51, 102, 0.95), rgba(2, 6, 23, 0.95));
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sessionInfo {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.sessionInfo h3 {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.sessionInfo p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+}
+
+/* Search Bar in Attendance Modal */
+.manualAttendanceSearch {
+  margin-bottom: 1.5rem;
+}
+
+.manualAttendanceSearch .searchBar {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.manualAttendanceSearch .searchBar .searchInput {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.7rem 1rem 0.7rem 2.5rem;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.manualAttendanceSearch .searchBar .searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.manualAttendanceSearch .searchBar .searchIcon {
+  left: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+}
+
+.markPresentBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #2ecc71;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.markPresentBtn:hover:not(:disabled) {
+  background: #26a65b;
+  transform: translateY(-1px);
+}
+
+.markPresentBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.attendanceHint {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.5rem;
+}
+
+/* Attendance List */
+.attendanceList {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.attendanceHeader {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px 12px 0 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+}
+
+.attendanceRow {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.2s ease;
+}
+
+.attendanceRow:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.presentBadge {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  width: fit-content;
+}
+
+.absentBadge {
+  background: rgba(200, 16, 46, 0.2);
+  color: #c8102e;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  width: fit-content;
+}
+
+.emptyStudents {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.emptyStudents .emptyIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.emptyStudents p {
+  font-size: 0.8rem;
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  font-size: 1.5rem;
+  color: #ffb81c;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled button state */
+.qrBtn:disabled,
+.attendanceBtn:disabled,
+.cancelSessionBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.qrBtn:disabled:hover {
+  background: rgba(200, 16, 46, 0.2);
+  color: #c8102e;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .modulesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    margin-left: 80px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .mainContent {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modulesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sessionDetails {
+    grid-template-columns: 1fr;
+  }
+  
+  .attendanceHeader, .attendanceRow {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .statusButtons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 0.8rem;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
+  
+  .sessionHeader {
+    flex-direction: column;
+  }
+  
+  .sessionActions {
+    flex-direction: column;
+  }
+  
+  .sessionActions button {
+    width: 100%;
+  }
+
+
+  /* Add these new styles to your existing CSS */
+
+/* Loading Spinner */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled button state */
+.qrBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.qrBtn:disabled:hover {
+  background: rgba(200, 16, 46, 0.2);
+  color: #c8102e;
+  transform: none;
+}
+
+/* Download Report Button */
+.downloadReportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.downloadReportBtn:hover {
+  background: #2ecc71;
+  color: white;
+}
+
+/* View Report Button */
+.viewReportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(74, 158, 255, 0.2);
+  color: #4a9eff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewReportBtn:hover {
+  background: #4a9eff;
+  color: white;
+}
+
+/* Active state for status buttons */
+.statusPresentBtn.active,
+.statusAbsentBtn.active {
+  transform: scale(1.02);
+}
+
+.statusPresentBtn.active {
+  background: #2ecc71;
+  color: white;
+  box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+}
+
+.statusAbsentBtn.active {
+  background: #c8102e;
+  color: white;
+  box-shadow: 0 2px 8px rgba(200, 16, 46, 0.3);
+}
+}

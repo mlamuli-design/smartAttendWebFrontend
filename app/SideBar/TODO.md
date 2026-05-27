@@ -1,0 +1,1 @@
+# TODO: Collapse Button Repositioning\n\n- [ ] Step 1: Create TODO.md (current)\n- [ ] Step 2: Edit SideNav.module.css to add conditional flex-direction and margins for .header and .collapseBtn\n- [ ] Step 3: Test collapse/expand behavior\n- [ ] Step 4: Mark complete and attempt_completion
