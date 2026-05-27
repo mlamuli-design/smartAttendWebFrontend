@@ -1,2 +1,2 @@
-export const IP = "http://localhost:5000";
+export const IP = "https://smartattendwebbackend.onrender.com";
 export const PORT = "5000"; 
