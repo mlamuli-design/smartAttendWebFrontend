@@ -207,8 +207,29 @@ export default function LecturerManagement() {
       : { color: "#c8102e", bg: "rgba(200, 16, 46, 0.15)", text: "Inactive" };
   };
 
+  // Loading indicator component
+  const LoadingIndicator = () => (
+    <div className={styles.loadingContainer}>
+      <div className={styles.loadingCard}>
+        <div className={styles.spinnerWrapper}>
+          <div className={styles.spinnerRing}>
+            <div className={styles.spinner} />
+          </div>
+          <FaSpinner className={styles.spinnerIcon} />
+        </div>
+        <div className={styles.loadingText}>
+          <span className={styles.loadingMessage}>Loading modules</span>
+          <div className={styles.loadingDots}>
+            <span>.</span><span>.</span><span>.</span>
+          </div>
+        </div>
+        <p className={styles.loadingSubtext}>Please wait while we fetch your data</p>
+      </div>
+    </div>
+  );
+
   if (loading) {
-    return <div className={styles.loading}>Loading...</div>;
+    return <LoadingIndicator />;
   }
 
   return (

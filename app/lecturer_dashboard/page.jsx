@@ -94,8 +94,8 @@ const todaySessions = [
 
 // Mock data for recent activities
 const recentActivities = [
-  { id: 1, action: "QR Code generated for Data Structures", time: "2 minutes ago", type: "qr" },
-  { id: 2, action: "Student enrolled in Database Systems", time: "1 hour ago", type: "enrollment" },
+  { id: 1, action: "QR Code generated for Data Structures", time: "2 hours ago", type: "qr" },
+  { id: 2, action: "Student enrolled in Database Systems", time: "2 hours ago", type: "enrollment" },
   { id: 3, action: "Attendance marked for Advanced Agriculture", time: "3 hours ago", type: "attendance" },
   { id: 4, action: "New student added to Organic Chemistry", time: "5 hours ago", type: "enrollment" },
   { id: 5, action: "Session completed for Database Systems", time: "1 day ago", type: "session" }
@@ -159,7 +159,6 @@ export default function LecturerDashboard() {
         {/* Welcome Header */}
         <div className={styles.welcomeHeader}>
           <div className={styles.welcomeText}>
-            <h1>{greeting}, <span className={styles.lecturerName}>{lecturerName}</span> 👋</h1>
             <p>Welcome to your lecturer dashboard. Manage your modules, track attendance, and generate QR codes.</p>
           </div>
           <div className={styles.dateBadge}>
