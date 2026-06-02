@@ -15,7 +15,8 @@ import {
   FaCheckCircle,
   FaExclamationCircle,
   FaChalkboardTeacher,
-  FaCalendarAlt
+  FaCalendarAlt,
+  FaSpinner
 } from "react-icons/fa";
 import SideNav from "../SideBar/page";
 import styles from "./page.module.css";

@@ -14,7 +14,8 @@ import {
   FaLayerGroup,
   FaCheckCircle,
   FaExclamationCircle,
-  FaClock
+  FaClock,
+  FaSpinner
 } from "react-icons/fa";
 import SideNav from "../SideBar/page";
 import styles from "./page.module.css";
